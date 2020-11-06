@@ -15,6 +15,10 @@ namespace projeto_xadrez
             Console.WriteLine();
             Console.WriteLine("Turno: " + partida.turno);
             Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
+            if (partida.xeque)
+            {
+                Console.WriteLine("XEQUE");
+            }
         }
         public static void imprimirPecasCapturadas(PartidaDeXadrez partida)
         {
@@ -34,7 +38,7 @@ namespace projeto_xadrez
             Console.Write("[");
             foreach (Peca x in conjunto)
             {
-                Console.Write(x+" ");
+                Console.Write(x + " ");
             }
             Console.Write("]");
         }
